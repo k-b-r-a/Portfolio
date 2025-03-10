@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../Icons/LinkedIn.astro";
+import SocialPill from "../Icons/SocialPill.astro";
+import GithubIcon from "../Icons/Github.astro";
+import MailIcon from "../Icons/Mail.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout
+  title="Porfolio de Esteban Z - Desarrollador y Programador Web"
+  descriptio=""
+/>
+<main>
+  <section class="w-full mx-auto lg:w-[740px] py-44">
+    <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+      ¡Hola! Soy Esteban <a
+        href="www.linkedin.com/in/esteban-zea-19b057219"
+        target="_blank"
+        rel="noopener"
+        class="flex justify-center items-center"
+      >
+        <Badge>Disponible</Badge>
+      </a>
+    </h1>
+    <h2 class="text-xl text-wrap">
+      Apasionado
+      <span class="text-yellow-200/90"> desarrollador web </span>
+      <span class="text-blue-200/90">
+        desarrollando e implementando soluciones digitales</span
+      >
+      <span class="text-pink-200/90 opacity-85"
+        >Especializado en crear aplicaciones unicas</span
+      >
+    </h2>
+    <nav class="flex gap-x-2 py-4">
+      <SocialPill href="https://www.linkedin.com/in/esteban-zea-19b057219">
+        <LinkedInIcon class="size-6" />
+        LinkedIn
+      </SocialPill>
+      <SocialPill href="https://github.com/k-b-r-a">
+        <GithubIcon class="size-6" />
+        Github
+      </SocialPill>
+      <SocialPill href="">
+        <MailIcon class="size-6" />
+        Estebanzeb.0@gmail.com
+      </SocialPill>
+    </nav>
+  </section>
+</main>
