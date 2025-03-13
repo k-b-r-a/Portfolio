@@ -1,54 +1,82 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
-import LinkedInIcon from "../Icons/LinkedIn.astro";
-import SocialPill from "../Icons/SocialPill.astro";
-import GithubIcon from "../Icons/Github.astro";
-import MailIcon from "../Icons/Mail.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GithubIcon from "../icons/Github.astro";
+import MailIcon from "../icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefcaseIcon from "../icons/Briefcase.astro";
+import CodeIcon from "../icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
+import ProfileCheck from "../icons/ProfileCheck.astro";
 ---
 
 <Layout
   title="Porfolio de Esteban Z - Desarrollador y Programador Web"
   descriptio=""
-/>
-<main>
-  <section class="w-full mx-auto lg:w-[740px] py-44">
-    <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-      ¡Hola! Soy Esteban <a
-        href="www.linkedin.com/in/esteban-zea-19b057219"
-        target="_blank"
-        rel="noopener"
-        class="flex justify-center items-center"
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-24">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
-        <Badge>Disponible</Badge>
-      </a>
-    </h1>
-    <h2 class="text-xl text-wrap">
-      Apasionado
-      <span class="text-yellow-200/90"> desarrollador web </span>
-      <span class="text-blue-200/90">
-        desarrollando e implementando soluciones digitales</span
-      >
-      <span class="text-pink-200/90 opacity-85"
-        >Especializado en crear aplicaciones unicas</span
-      >
-    </h2>
-    <nav class="flex gap-x-2 py-4">
-      <SocialPill href="https://www.linkedin.com/in/esteban-zea-19b057219">
-        <LinkedInIcon class="size-6" />
-        LinkedIn
-      </SocialPill>
-      <SocialPill href="https://github.com/k-b-r-a">
-        <GithubIcon class="size-6" />
-        Github
-      </SocialPill>
-      <SocialPill href="">
-        <MailIcon class="size-6" />
-        Estebanzeb.0@gmail.com
-      </SocialPill>
-    </nav>
-  </section>
-</main>
+        ¡Hola! Soy Esteban <a
+          href="https://www.linkedin.com/in/esteban-zea-19b057219"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        Apasionado
+        <span class="text-yellow-200/90"> desarrollador </span>
+        <span class="text-blue-200/90">
+          siempre desarrollando e implementando soluciones digitales</span
+        >
+        <span class="text-pink-200/90 opacity-85"
+          >y especializado en crear aplicaciones unicas</span
+        >
+      </h2>
+      <nav class="flex gap-x-4 py-4 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/esteban-zea-19b057219">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/k-b-r-a">
+          <GithubIcon class="size-4 md:size-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:estebanzeb.0@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          Estebanzeb.0@gmail.com
+        </SocialPill>
+      </nav>
+      <!-- </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-8" /> Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer> -->
+
+      <SectionContainer id="proyectos">
+        <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+          <CodeIcon class="size-8" /> Proyectos
+        </h2>
+        <Projects />
+      </SectionContainer>
+    </SectionContainer>
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ProfileCheck class="size-8" />
+        -Acerca de mi
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </main>
+</Layout>
