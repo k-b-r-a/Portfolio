@@ -1,39 +1,72 @@
 ---
-import PythonIcon from "../Icons/Python.astro";
-import SeleniumIcon from "../Icons/Selenium.astro";
-import LinkButton from "./LinkButton.astro";
-import GithubIcon from "../Icons/Github.astro";
+import PythonIcon from '../Icons/Python.astro';
+import SeleniumIcon from '../Icons/Selenium.astro';
+import LinkButton from './LinkButton.astro';
+import GithubIcon from '../Icons/Github.astro';
+import ReactIcon from '../Icons/React.astro';
+import ExpressIcon from '../Icons/Express.astro';
+import TailwindIcon from '../Icons/Tailwind.astro';
+import MongodbIcon from '../Icons/Mongodb.astro';
 
 const TAGS = {
   PYTHON: {
-    name: "Python",
-    class: "bg-[#3771A4] text-white",
+    name: 'Python',
+    class: 'bg-[#3771A4] text-gray-200',
     icon: PythonIcon,
   },
   SELENIUM: {
-    name: "Selenium",
-    class: "bg-[RGB(43,171,50)] text-white",
+    name: 'Selenium',
+    class: 'bg-[RGB(43,171,50)] text-gray-200',
     icon: SeleniumIcon,
+  },
+  REACT: {
+    name: 'React',
+    class: 'bg-[#58C4DC] text-gray-800',
+    icon: ReactIcon,
+  },
+  EXPRESS: {
+    name: 'Express',
+    class: 'bg-[#87C643] text-black',
+    icon: ExpressIcon,
+  },
+  TAILWIND: {
+    name: 'Tailwind',
+    class: 'bg-[#00BCFF] text-black',
+    icon: TailwindIcon,
+  },
+  MONGODB: {
+    name: 'MongoDB',
+    class: 'bg-[#00E361] text-black',
+    icon: MongodbIcon,
   },
 };
 
 const PROJECTS = [
   {
-    title: "TS3 Bot Music",
+    title: "Miguel's gallery",
     description:
-      "Un simple bot de musica usando selenium y python para tener un bot de musica en ts3.",
-    link: "",
-    github: "https://github.com/k-b-r-a/Ts3_Bot_Music",
-    image: "/projects/Ts3_Bot_Music.webp",
+      'Una galería especial para compartir las fotos de @mykegallery.',
+    link: '',
+    github: 'https://github.com/k-b-r-a/Miguels_Gallery',
+    image: '/projects/Miguels_gallery.webp',
+    tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.TAILWIND, TAGS.MONGODB],
+  },
+  {
+    title: 'TS3 Bot Music',
+    description:
+      'Un simple bot de musica usando selenium y python para tener un bot de musica en ts3.',
+    link: '',
+    github: 'https://github.com/k-b-r-a/Ts3_Bot_Music',
+    image: '/projects/Ts3_Bot_Music.webp',
     tags: [TAGS.PYTHON, TAGS.SELENIUM],
   },
   {
-    title: "Tesseract Translator Window",
+    title: 'Tesseract Translator Window',
     description:
-      "Aplicacion que usa Tesseract OCR (Reconocimiento Óptico de Caracteres) para extraer texto de imágenes y luego traducirlo a otro idioma.",
-    link: "",
-    github: "https://github.com/k-b-r-a/Tesseract_Translator_Window",
-    image: "/projects/Window_Translator_Tesseract.webp",
+      'Aplicacion que usa Tesseract OCR (Reconocimiento Óptico de Caracteres) para extraer texto de imágenes y luego traducirlo a otro idioma.',
+    link: '',
+    github: 'https://github.com/k-b-r-a/Tesseract_Translator_Window',
+    image: '/projects/Window_Translator_Tesseract.webp',
     tags: [TAGS.PYTHON],
   },
 ];
@@ -46,7 +79,7 @@ const PROJECTS = [
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              alt="Project"
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
               src={image}

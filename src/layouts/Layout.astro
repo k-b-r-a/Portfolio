@@ -1,7 +1,7 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import "@fontsource-variable/onest";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '@fontsource-variable/onest';
 
 const { title } = Astro.props;
 const { description } = Astro.props;
@@ -29,12 +29,12 @@ const { description } = Astro.props;
   </body>
 
   <style is:global>
-    @import "tailwindcss";
+    @import 'tailwindcss';
     :root {
       color-scheme: light dark;
     }
     html {
-      font-family: "Onest", system-ui, sans-serif, sans-serif;
+      font-family: 'Onest', system-ui, sans-serif, sans-serif;
     }
 
     body {
